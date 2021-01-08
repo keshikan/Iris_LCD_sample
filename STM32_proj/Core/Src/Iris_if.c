@@ -23,7 +23,6 @@ void sendCmd(uint8_t dat)
 	asm("NOP");asm("NOP");asm("NOP");asm("NOP");
 
 	IRIS_CONFIG->BSRR = IRIS_WRX_PIN;
-
 }
 
 void sendDat(uint8_t dat)
@@ -47,7 +46,6 @@ void clearScr()
 		sendDat(0x00);
 		sendDat(0x00);
 	}
-
 }
 
 void initIris()
@@ -182,29 +180,28 @@ void irisDrawDot(uint16_t x, uint16_t y, uint16_t color)
 void irisClearDisp()
 {
 	for(uint32_t i=0; i<IRIS_SIZ_VRAM * 2; i++){
-		  vram[i] = 0x00;
+		vram[i] = 0x00;
 	}
 }
 
 void irisUpdate()
 {
-	  //Column Addr set
-	  sendCmd(0x2A);
-	  sendDat(0x00);
-	  sendDat(0x00);
-	  sendDat(0x01);
-	  sendDat(0x3F);
+	//Column Addr set
+	sendCmd(0x2A);
+	sendDat(0x00);
+	sendDat(0x00);
+	sendDat(0x01);
+	sendDat(0x3F);
 
-	  //Page Addr set
-	  sendCmd(0x2B);
-	  sendDat(0x00);
-	  sendDat(0x00);
-	  sendDat(0x5F);
+	//Page Addr set
+	sendCmd(0x2B);
+	sendDat(0x00);
+	sendDat(0x00);
+	sendDat(0x5F);
 
-	  //Write
-	  sendCmd(0x2C);
-
-		for(uint32_t i=0; i<IRIS_SIZ_VRAM * 2; i++){
-			  sendDat(vram[i]);
-		}
+	//Write
+	sendCmd(0x2C);
+	for(uint32_t i=0; i<IRIS_SIZ_VRAM * 2; i++){
+		sendDat(vram[i]);
+	}
 }
