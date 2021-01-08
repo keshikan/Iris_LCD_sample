@@ -5,6 +5,7 @@
 ## 概要
 
 おもちゃ「マジョカアイリス」に使用されている横長LCDを動かすためのソフトウェアです。
+
 STM32F746(Nucleo-F746ZG)で動作確認済みです。STM32CubeIDE1.5.1で作成。
 
 ※こちらの[Wiki](https://github.com/htlabnet/inside_magimajopures/wiki)に詳しい情報があります。
@@ -37,6 +38,7 @@ STM32F746(Nucleo-F746ZG)で動作確認済みです。STM32CubeIDE1.5.1で作成
 |  P20  |  LED+  | 12V※ |
 |  P21  |  LED-  |
 |  P22  |  GND  |
+
 ※+12V直接印加OK。抵抗等は不要。
 
 
