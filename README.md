@@ -39,7 +39,8 @@ STM32F746(Nucleo-F746ZG)で動作確認済みです。STM32CubeIDE1.5.1で作成
 |  P21  |  LED-  |
 |  P22  |  GND  |
 
-※+12V直接印加OK。抵抗等は不要。
+※~~+12V直接印加OK。抵抗等は不要。~~
+ [こちらの記事](https://github.com/htlabnet/inside_magimajopures/wiki/sushi_chika)によると、LCD基板のロット(緑色・黄色)によって電源が異なるようです。
 
 
 ## 謝辞
