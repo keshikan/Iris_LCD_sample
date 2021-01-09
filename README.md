@@ -35,7 +35,7 @@ STM32F746(Nucleo-F746ZG)で動作確認済みです。STM32CubeIDE1.5.1で作成
 |  P17  |  GND  |
 |  P18  |  VDD | 3.3V |
 |  P19  |  VDD  | 3.3V |
-|  P20  |  LED+  | 12V※ |
+|  P20  |  LED+  | 12V, 6V※ |
 |  P21  |  LED-  |
 |  P22  |  GND  |
 
